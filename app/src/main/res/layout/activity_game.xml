@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/game_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:text="遊戲開始"
+        android:textSize="36sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/adice2"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aa_openbtn"
+        app:srcCompat="@drawable/num1" />
+
+    <ImageView
+        android:id="@+id/adice3"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintStart_toEndOf="@+id/adice1"
+        app:layout_constraintTop_toTopOf="@+id/adice1"
+        app:srcCompat="@drawable/num2" />
+
+    <ImageView
+        android:id="@+id/adice5"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/adice4"
+        app:layout_constraintTop_toBottomOf="@+id/adice3"
+        app:srcCompat="@drawable/num1" />
+
+    <ImageView
+        android:id="@+id/adice1"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/adice2"
+        app:layout_constraintTop_toTopOf="@+id/adice2"
+        app:srcCompat="@drawable/num1" />
+
+    <ImageView
+        android:id="@+id/adice4"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adice2"
+        app:srcCompat="@drawable/num1" />
+
+    <ImageView
+        android:id="@+id/bdice2"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/bb_openbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/num4" />
+
+    <ImageView
+        android:id="@+id/bdice5"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bdice3"
+        app:layout_constraintStart_toEndOf="@+id/bdice4"
+        app:srcCompat="@drawable/num5" />
+
+    <ImageView
+        android:id="@+id/bdice3"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintStart_toEndOf="@+id/bdice1"
+        app:layout_constraintTop_toTopOf="@+id/bdice1"
+        app:srcCompat="@drawable/num2" />
+
+    <ImageView
+        android:id="@+id/bdice1"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintStart_toEndOf="@+id/bdice2"
+        app:layout_constraintTop_toTopOf="@+id/bdice2"
+        app:srcCompat="@drawable/num3" />
+
+    <ImageView
+        android:id="@+id/bdice4"
+        android:layout_width="81dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bdice2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/num6" />
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="reddice"
+        android:text="拿紅色"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toEndOf="@+id/big"
+        app:layout_constraintTop_toTopOf="@+id/big" />
+
+    <Button
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:onClick="blackdice"
+        android:text="拿黑色"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toStartOf="@+id/red"
+        app:layout_constraintTop_toTopOf="@+id/small" />
+
+    <Button
+        android:id="@+id/big"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="17dp"
+        android:onClick="bigdice"
+        android:text="拿大"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toEndOf="@+id/nextbtn"
+        app:layout_constraintTop_toBottomOf="@+id/adice4" />
+
+    <Button
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:onClick="smalldice"
+        android:text="拿小"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toStartOf="@+id/big"
+        app:layout_constraintTop_toBottomOf="@+id/big" />
+
+    <Button
+        android:id="@+id/odd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="odddice"
+        android:text="拿奇數"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toEndOf="@+id/red"
+        app:layout_constraintTop_toTopOf="@+id/red" />
+
+    <Button
+        android:id="@+id/even"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="evendice"
+        android:text="拿偶數"
+        app:backgroundTint="#D0605A5A"
+        app:layout_constraintStart_toStartOf="@+id/odd"
+        app:layout_constraintTop_toTopOf="@+id/black" />
+
+    <TextView
+        android:id="@+id/PlayerA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="PlayerA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_state" />
+
+    <TextView
+        android:id="@+id/PlayerB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="PlayerB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/PlayerA" />
+
+    <TextView
+        android:id="@+id/roundnum"
+        android:layout_width="140dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:text="回合："
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_state" />
+
+    <Button
+        android:id="@+id/aa_openbtn"
+        android:layout_width="109dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:onClick="aopendice"
+        android:text="A玩家開骰"
+        app:backgroundTint="#978181"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/PlayerA"
+        app:layout_constraintTop_toTopOf="@+id/PlayerA"
+        app:rippleColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/bb_openbtn"
+        android:layout_width="109dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="bopendice"
+        android:text="B玩家開骰"
+        app:backgroundTint="#978181"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayerB"
+        app:layout_constraintStart_toEndOf="@+id/PlayerB"
+        app:rippleColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/aa_closebtn"
+        android:layout_width="109dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="aclosedice"
+        android:text="A玩家關骰"
+        app:backgroundTint="#978181"
+        app:layout_constraintStart_toEndOf="@+id/aa_openbtn"
+        app:layout_constraintTop_toTopOf="@+id/aa_openbtn"
+        app:rippleColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/bb_closebtn"
+        android:layout_width="109dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="bclosedice"
+        android:text="B玩家關骰"
+        app:backgroundTint="#978181"
+        app:layout_constraintBottom_toBottomOf="@+id/bb_openbtn"
+        app:layout_constraintStart_toEndOf="@+id/bb_openbtn" />
+
+    <Button
+        android:id="@+id/nextbtn"
+        android:layout_width="65dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="83dp"
+        android:text="下一回合"
+        app:backgroundTint="#302D2D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adice2" />
+
+    <TextView
+        android:id="@+id/adicenum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="骰子數:5"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aa_closebtn" />
+
+    <TextView
+        android:id="@+id/bdicenum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="45dp"
+        android:text="骰子數:5"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/bb_closebtn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/ret_btn"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:text="RETURN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/aga_btn"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="AGAIN"
+        app:layout_constraintBottom_toBottomOf="@+id/ret_btn"
+        app:layout_constraintEnd_toStartOf="@+id/ret_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
